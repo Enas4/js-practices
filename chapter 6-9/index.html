@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chap 6-9</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Subject</th>
+        <th>Total marks</th>
+        <th>Obtained marks</th>
+        <th>Percentage</th>
+      </tr>
+      <tr>
+        <td>Maths</td>
+        <td>100</td>
+        <td id="math"></td>
+        <td id="math_per"></td>
+      </tr>
+      <tr>
+        <td>English</td>
+        <td>100</td>
+        <td id="eng"></td>
+        <td id="eng_per"></td>
+      </tr>
+      <tr>
+        <td>Science</td>
+        <td>100</td>
+        <td id="sci"></td>
+        <td id="sci_per"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>300</td>
+        <td id="total_marks"></td>
+        <td id="percentage"></td>
+      </tr>
+    </table>
+    <script>
+      //       1. Write a program to take a number in a variable, do the
+      // required arithmetic to display the following result in your
+      // browser:
+
+      // let num = 10;
+      // document.write(
+      //   `Result:<br> The value of num is ${num} <br> <br>The vale of ++num
+      //    is ${++num}<br> Now the value of num is ${num}<br> <br>The value
+      //    of num++ is ${num++}<br>Now the value of num is ${num}<br><br>
+      //    The value of --num is ${--num} <br> Now the value of num is ${num}<br><br>
+      //    The value of num is ${num--}<br>Now the value of num is ${num}`
+      // );
+
+      ////////////////////////////////////////////////////////////////////////////////
+
+      //       2. What will be the output in variables a, b & result after
+      // execution of the following script:
+      // var a = 2, b = 1;
+      // var result = --a - --b + ++b + b--;
+      // Explain the output at each stage:
+      // --a;
+      // --a - --b;
+      // --a - --b + ++b;
+      // --a - --b + ++b + b--;
+
+      // let a = 2;
+      // let b = 1;
+      // let result = --a - --b + ++b + ++b;
+      // document.write(`a is ${a} <br> b is ${b}<br> result is ${result}`);
+
+      // a is 1
+      //b is 2
+      // result is 4
+
+      ////////////////////////////////////////////////////////////////////////////////
+
+      //       3. Write a program to take input a number from user &
+      // display it’s multiplication table on your browser. If user
+      // does not enter a new number, multiplication table of 5
+      // should be displayed by default.
+
+      // let input_from_user = parseInt(prompt("Enter number to see it's table"));
+
+      // if (!isNaN(input_from_user)) {
+      //   console.log(!isNaN(input_from_user));
+      //   for (let i = 1; i <= 10; i++) {
+      //     document.write(
+      //       `${input_from_user} x ${i} = ${input_from_user * i} <br>`
+      //     );
+      //   }
+      // } else {
+      //   for (let i = 1; i <= 10; i++) {
+      //     document.write(`5 x ${i} = ${5 * i} <br>`);
+      //   }
+      // }
+
+      ////////////////////////////////////////////////////////////////////////////////
+
+      //       6. Take
+      // a) Take three subjects name from user and store them in 3
+      // different variables.
+      // b) Total marks for each subject is 100, store it in another
+      // variable.
+      // c) Take obtained marks for first subject from user and
+      // stored it in different variable.
+      // d) Take obtained marks for remaining 2 subjects from user
+      // and store them in variables.
+      // e) Now calculate total marks and percentage and show the
+      // result in browser like this.(Hint: user table)
+
+      // let maths = parseInt(prompt("Enter maths numbers?"));
+      // let english = parseInt(prompt("Enter english numbers?"));
+      // let science = parseInt(prompt("Enter science numbers?"));
+
+      // let total = maths + english + science;
+      // let percent_calculation = (total / 300) * 100;
+
+      // let math_marks = (document.getElementById("math").innerHTML = maths);
+      // let eng_marks = (document.getElementById("eng").innerHTML = english);
+      // let sci_marks = (document.getElementById("sci").innerHTML = science);
+
+      // let math_per = (maths / 100) * 100;
+      // let eng_per = (english / 100) * 100;
+      // let sci_per = (science / 100) * 100;
+
+      // let maths_per = (document.getElementById("math_per").innerHTML =
+      //   math_per + "%");
+      // let english_per = (document.getElementById("eng_per").innerHTML =
+      //   eng_per + "%");
+      // let science_per = (document.getElementById("sci_per").innerHTML =
+      //   sci_per + "%");
+
+      // let total_obtained = (document.getElementById("total_marks").innerHTML =
+      //   total);
+      // let percent_obtained = (document.getElementById("percentage").innerHTML =
+      //   percent_calculation);
+    </script>
+  </body>
+</html>

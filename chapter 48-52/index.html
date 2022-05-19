@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chap 48-52</title>
+    <style>
+      #showMore {
+        display: none;
+      }
+      table {
+        display: none;
+        border: 1px solid blue;
+        padding: 5px;
+        text-align: center;
+      }
+      th,
+      td {
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="formSubmission">
+      <h1>Submission Form</h1>
+      <label>First Name</label>
+      <input type="text" id="input1" />
+      <br />
+      <br />
+      <label>Last Name</label>
+      <input type="text" id="input2" />
+      <br />
+      <br />
+      <label>Email Address</label>
+      <input type="email" id="input3" />
+      <br />
+      <br />
+      <input type="submit" value="submit" onclick="formSubmission();" />
+    </form>
+
+    <p id="tosee" onclick="list();">click me</p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et dolorem unde
+      soluta inventore ipsum nihil molestiae, ea voluptatum quidem cupiditate
+      illo commodi quam eveniet placeat corrupti sit facilis veritatis veniam.
+      Lorem ipsum dolor sit amet consectetur, adipisicing.
+      <span id="dots">......</span
+      ><span id="showMore">
+        Et dolorem unde soluta inventore ipsum nihil molestiae, ea voluptatum
+        quidem cupiditate illo commodi quam eveniet placeat corrupti sit facilis
+        veritatis veniam. Lorem ipsum dolor sit amet consectetur, adipisicing
+        elit. Et dolorem unde soluta inventore ipsum nihil molestiae, ea
+        voluptatum quidem cupiditate illo commodi quam eveniet placeat corrupti
+        sit facilis veritatis veniam.</span
+      >
+    </p>
+    <button id="show" onclick="toggleFunction()">Read More</button>
+    <br />
+    <br />
+
+    <!-- <form action="" onclick="submitForm()">
+      Name:
+      <input type="text" id="student1" placeholder="enter student1 name" />
+      <input type="text" id="student2" placeholder="enter student2 name" />
+      <input type="text" id="student3" placeholder="enter student3 name" />
+    </form> -->
+
+    <form action="" id="getForm">
+      <label for="student1">Student 1 </label>
+      <input type="text" id="student1" />
+      <br />
+
+      <label for="engmarks">English Marks </label>
+      <input type="text" name="eng" id="engmarks" />
+      <br />
+
+      <label for="mathmarks">Math Marks </label>
+      <input type="text" name="math" id="mathmarks" />
+      <br />
+
+      <label for="scimarks">Science Marks </label>
+      <input type="text" name="sci" id="scimarks" />
+      <br />
+
+      <button>Submit</button>
+      <br />
+    </form>
+
+    <table id="table">
+      <tr>
+        <th>Student Name</th>
+        <th>Eng Marks</th>
+        <th>Math Marks</th>
+        <th>Science Marks</th>
+        <th>Percentage</th>
+      </tr>
+    </table>
+
+    <script>
+      // 1.Create a signup form and display form data in your web page on submission.
+
+      function formSubmission() {
+        let formInput = document.getElementsByTagName("input");
+        console.log(formInput);
+        for (let i = 0; i < formInput.length; i++) {
+          if (formInput[i].value === "") {
+            document.write("Fill all the fields");
+          }
+        }
+        let input1 = document.getElementById("input1").value;
+        let input2 = document.getElementById("input2").value;
+        let input3 = document.getElementById("input3").value;
+        document.write(`${input1}<br>${input2}<br>${input3}`);
+      }
+
+      ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      // Create a lsit on click function
+
+      // function list() {
+      //   var list =
+      //     "<ul><li>PHP</li><li>JavaScript</li><li>C++</li><li>Python</li></ul>";
+      //   document.getElementById("tosee").innerHTML = list;
+      // }
+
+      ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      //2.Suppose in your webpage there is content are in which you have entered your items details, but user can only
+      // see some details on first look.When user click on "Read more" button,full detail of that particular item will be
+      // display.
+
+      function toggleFunction() {
+        let showMore = document.getElementById("showMore");
+        let dots = document.getElementById("dots");
+        let show = document.getElementById("show");
+
+        if (showMore.style.display === "none") {
+          showMore.style.display = "inline";
+          dots.style.display = "none";
+          show.innerHTML = "Read Less";
+        } else {
+          showMore.style.display = "none";
+          dots.style.display = "inline";
+          show.innerHTML = "Read More";
+        }
+      }
+
+      ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      //3.In previous assignment you have created a tabiular data using javascript.Let's modify that.Create a form which
+      //take student's details and show each student detail in table.Each row of table must contain a delete button
+      //and an edit button. On click on delete button entire row should be deleted.Later we will also work on edit button.
+
+      document.getElementById("getForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        document.getElementById("table").style.display = "block";
+
+        var table = document.getElementById("table");
+        var row = table.insertRow();
+        var studentName = row.insertCell();
+        var engmarks = row.insertCell();
+        var mathmarks = row.insertCell();
+        var scimarks = row.insertCell();
+        var per = row.insertCell();
+
+        studentName.innerHTML = document.getElementById("student1").value;
+
+        let EngMarks = +(engmarks.innerHTML = e.target["eng"].value);
+
+        let MathMarks = +(mathmarks.innerHTML = e.target["math"].value);
+
+        let SciMarks = +(scimarks.innerHTML = e.target["sci"].value);
+        var percentage = ((EngMarks + MathMarks + SciMarks) / 300) * 100;
+
+        let percent = (per.innerHTML = percentage + "%");
+        console.log(percentage);
+      });
+    </script>
+  </body>
+</html>

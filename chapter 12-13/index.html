@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chap 12-13</title>
+  </head>
+  <body>
+    <script>
+      //       1. Write a program that takes a character (number or string)
+      // in a variable & checks whether the given input is a
+      // number, uppercase letter or lower case letter. (Hint: ASCII
+      // codes:- A=65, Z=90, a=97, z=122).
+
+      // var userStrings = prompt(
+      //   "Enter number letter or character to check its upperCase or lowerCase"
+      // );
+
+      // var character = "";
+      // for (var i = 0; i < userStrings.length; i++) {
+      //   character = userStrings.charAt(i);
+      //   if (!isNaN(character * 1)) {
+      //     alert("Character is numeric");
+      //   } else {
+      //     if (character == character.toUpperCase()) {
+      //       alert("Character is an Upper case");
+      //     }
+      //     if (character == character.toLowerCase()) {
+      //       alert("Character is Lower case");
+      //     }
+      //   }
+      // }
+
+      ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      //       2. Write a JavaScript program that accept two integers and
+      // display the larger. Also show if the two integers are equal.
+
+      // const num1 = +prompt("Enter first number: ");
+      // const num2 = +prompt("Enter second number: ");
+      // const num3 = +prompt("Enter third number: ");
+
+      // let BigInt;
+      // if (num1 === num2 && num1 === num3) {
+      //   BigInt = num1;
+      //   console.log(`All entries are equal, that is ${BigInt}`);
+      // } else if ((largest = Math.max(num1, num2, num3))) {
+      //   BigInt = largest;
+      //   console.log(`The largest number is ${BigInt}`);
+      // }
+
+      ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      //       3. Write a program that takes input a number from user &
+      // state whether the number is positive, negative or zero.
+
+      // let userInteger = +prompt("Enter integer to check its type !");
+
+      // if (userInteger === 0) {
+      //   document.write(`The number is 0`);
+      // } else if (userInteger > 0) {
+      //   document.write(`The number is "POSITIVE"`);
+      // } else if (userInteger < 0) {
+      //   document.write(`The number is "NEGATIVE"`);
+      // }
+
+      ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      //       4. Write a program that takes a character (i.e. string of
+      // length 1) and returns true if it is a vowel, false otherwise
+
+      // function vowels(str) {
+      //   var counter;
+      //   const checker = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+      //   for (let char of str) {
+      //     if ((counter = checker.includes(char))) {
+      //       console.log(`${counter}, it's a vowel`);
+      //     } else {
+      //       console.log(`${counter}, it's a consonant`);
+      //     }
+      //   }
+      // }
+
+      // let str = prompt("Enter vowel to check");
+      // vowels(str);
+
+      ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      //       5. Write a program that
+      // a. Store correct password in a JS variable.
+      // b. Asks user to enter his/her password
+      // c. Validate the two passwords:
+      // i. Check if user has entered password. If not, then
+      // give message “ Please enter your password”
+      // ii. Check if both passwords are same. If they are
+      // same, show message “Correct! The password you
+      // entered matches the original password”. Show
+      // “Incorrect password” otherwise.
+
+      // let correctPassword = "dawn";
+      // let user = prompt("Enter password to check");
+      // if (user === "") {
+      //   document.write(`Please enter your password`);
+      // } else if (user === correctPassword) {
+      //   document.write(
+      //     `Correct! The password you entered matches the original password`
+      //   );
+      // } else {
+      //   document.write(`Incorrect password`);
+      // }
+
+      ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      //       6. This if/else statement does not work. Try to fix it:
+      // var greeting;
+      // var hour = 13;
+      // if (hour < 18) {
+      // greeting = "Good day";
+      // else
+      // greeting = "Good evening";
+      // }
+
+      // var greeting;
+      // var hour = 13;
+      // if (hour < 18) {
+      //   greeting = "Good day";
+      //   document.write(greeting);
+      // } else {
+      //   greeting = "Good evening";
+      //   document.write(greeting);
+      // }
+
+      ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      //       7. Write a program that takes time as input from user in 24
+      // hours clock format like: 1900 = 7pm. Implement the
+      // following case using if, else & else if statements
+
+      // let userTime = +prompt("Enter hours to see day time");
+
+      // if (userTime >= 0000 && userTime < 1200) {
+      //   document.write("Good Morning!");
+      // } else if (userTime >= 1200 && userTime < 1700) {
+      //   document.write("Good Afternoon!");
+      // } else if (userTime >= 1700 && userTime < 2000) {
+      //   document.write("Good Evening!");
+      // } else if (userTime >= 2000 && userTime <= 2359) {
+      //   document.write("Good Night!");
+      // }
+
+      ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+       // Q:1 Write a program that takes a character (i.e. string of
+      // length 1) and returns true if it is a vowel, false otherwise
+
+      // var input_1 = prompt("enter vowel");
+      // var vowel = ["a", "e", "i", "o", "u"];
+      // var found = false;
+
+      // for(var i = 0; i < vowel.length; i++){
+      //    if(vowel[i] == input_1){
+      //     found = true;
+      //     break;
+      //    }
+      // }
+      // if (found == true){
+      //     alert ("you hav entered vowel");
+      // }
+      // else{
+      //     alert("learn the vowels");
+      // }
+    </script>
+  </body>
+</html>

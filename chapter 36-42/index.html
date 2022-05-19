@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chap36-42</title>
+  </head>
+  <body>
+    <script>
+      // 1. Write a custom function power ( a, b ), to calculate the value of a raised to b.
+
+      // let power = (a, b) => Math.pow(a, b);
+      // console.log(power(2, 4));
+
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      // 2. Any year is entered through the keyboard. Write a function to determine whether the year is a leap year
+      // or not. Leap years ..., 2012, 2016, 2020, …
+
+      // let leap_year = (year) => new Date(year, 1, 29).getMonth() === 1;
+      // console.log(leap_year(2017));
+
+      //OR
+
+      // let leap_year = (year) => year % 2 === 0;
+      // console.log(leap_year(2018));
+
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      // 3. If the lengths of the sides of a triangle are denoted by a, b, and
+      // c, then area of triangle is given by
+      // area = S(S − a)(S − b)(S − c)
+      // where, S = ( a + b + c ) / 2
+      // Calculate area of triangle using 2 functions
+
+      // function sidesOfTriangle(a, b, c) {
+      //   let sides = (a + b + c) / 2;
+      //   return sides;
+      // }
+
+      // let areaOfTriangle = (a, b, c) => {
+      //   let S = sidesOfTriangle(2, 5, 3);
+      //   // let formula = S(S - a)(S - b)(S - c);
+      //   let aSide = S - a;
+      //   let bSide = S - b;
+      //   let cSide = S - c;
+      //   let area = aSide + bSide + cSide;
+      //   return area;
+      // };
+      // console.log(areaOfTriangle(2, 3, 4));
+
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      // 4. Write a function that receives marks received by a student in 3 subjects and returns the average and
+      //percentage of these marks. there should be 3 functions one is the mainFunction and other are for average
+      // and percentage. Call those functions from mainFunction and display result in mainFunction.
+
+      // function average(v1, v2, v3) {
+      //   var sum = v1 + v2 + v3;
+      //   return sum;
+      // }
+      // function percentage() {
+      //   var recieveSum = average(v1, v2, v3);
+      //   var per = (recieveSum / 300) * 100;
+      //   return per.toFixed(2);
+      // }
+      // function mainFunction() {
+      //   return document.write(`The percentage of result is ${percentage()}`);
+      // }
+
+      // let v1 = +prompt("Enter science marks");
+      // let v2 = +prompt("Enter maths marks");
+      // let v3 = +prompt("Enter english marks");
+      // console.log(mainFunction());
+
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      // 5. You have learned the function indexOf. Code your own custom function that will perform the same functionality.
+      //You can code for single character as of now.
+
+      // var str = "MDN - Resources for developers and developers";
+      // let count = str.match(/developers/g || []);
+      // let occurence = count.length;
+      // console.log(occurence);
+
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      // 6. Write a function to delete all vowels from a sentence. Assume that the sentence is not more than
+      // 25 characters long.
+
+      // let strings = [
+      //   "bongo drums",
+      //   "guitar",
+      //   "flute",
+      //   "double bass",
+      //   "xylophone",
+      //   "piano",
+      // ];
+      // let string = strings.map((x) => x.replace(/[aeiou]/g, ""));
+      // document.write(string);
+
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      //7. Write a function with switch statement to count the number of occurrences of any two vowels in succession in
+      //a line of text. For example, in the sentence .Pleases read this application and give me gratuity. Such occurrences
+      //are ea, ui, o.
+
+      // function findOccurrences() {
+      //   var str = "Pleases read this application and give me gratuity";
+      //   var res = str.match(/[aeiou]/g);
+      //   return res ? res.length : 0;
+      // }
+      // var found = findOccurrences();
+
+      // console.log(found);
+
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      // 8. The distance between two cities (in km.) is input through the keyboard. Write four functions to convert
+      //and print this distance in meters, feet, inches and centimeters.
+
+      // function citiesInKm(km) {
+      //   let meter = km * 1000;
+      //   let feet = km * 3280.84;
+      //   let inch = km * 39370.08;
+      //   let centimeters = km * 100000.0032;
+      //   return document.write(
+      //     `Meter:${meter}<br>Feet:${feet}<br>Inch:${inch}<br>Centimeter:${centimeters}`
+      //   );
+      // }
+      // citiesInKm(
+      //   prompt(
+      //     "Enter distance in km to convert in meter, feet, inch and centimeter"
+      //   )
+      // );
+
+      //////////////////////////////////////////////////////////////////////////
+
+      // Q:5 Write a program to take “city” name as input from user. If
+      // user enters “Karachi”, welcome the user like this:
+      // “Welcome to city of lights”
+
+      // var user = prompt("enter city name");
+      // function cities(user){
+      //    user = user.toLowerCase();
+      // switch(user){
+      //     case "islamabad":
+      //     document.write("capital smart city");
+      //     break;
+      //     case "karachi":
+      //     document.write("city of lights");
+      //     break;
+      //     case "lahore":
+      //     document.write("city of mughals");
+      //     break;
+      //     case "multan":
+      //     document.write("city of saints");
+      //     break;
+      //     default:
+      //     document.write("enter any city name");
+      // }
+      // }
+      // cities(user);
+
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      // 9. Write a program to calculate overtime pay of employees. Overtime is paid at the rate of Rs. 12.00 per hour
+      //for every hour worked above 40 hours. Assume that employees do not work for fractional part of an hour.
+
+      // function overTime(employeeHours, ratePerHour) {
+      //   if (!Number.isInteger(employeeHours)) {
+      //     console.log("It's a fractional part of hours");
+      //     return;
+      //   }
+      //   if (employeeHours > 40) {
+      //     let diff = employeeHours - 40;
+      //     console.log(`Your extra charges per hours are ${diff * ratePerHour}`);
+      //   } else {
+      //     document.write("Not done extra hours");
+      //   }
+      // }
+      // let employeeHours = +prompt("Enter working hours");
+      // let employeeOvertimeRate = +prompt("Enter rate per hour");
+
+      // overTime(employeeHours, employeeOvertimeRate);
+
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      // 10. A cashier has currency notes of denominations 10, 50 and 100. If the amount to be withdrawn is input through
+      // the keyboard in hundreds, find the total number of currency notes of each denomination the cashier will
+      // have to give to the withdrawer.
+
+      // var user = +prompt("Enter Currency");
+
+      // var thousand = Math.floor(user / 1000);
+      // var remThousand = user - thousand * 1000;
+
+      // var hundred = Math.floor(remThousand / 100); //4
+      // var rem = remThousand - hundred * 100; //470-(4*100) = 70
+
+      // var fifty = Math.floor(rem / 50);
+      // var remfif = rem - fifty * 50; //70-(1*50) = 20
+
+      // var tens = Math.floor(remfif / 10);
+
+      // var show = `You have ${thousand} thousand notes,  ${hundred} hundred notes, ${fifty} fifty notes, ${tens} tens notes`;
+      // console.log(show);
+    </script>
+  </body>
+</html>

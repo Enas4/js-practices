@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chap43-48</title>
+    <style>
+      img {
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="showAlert()">Show an alert box</button>
+
+    <img src="mobile.jpeg" alt="mobile image" onclick="clickMobile()" />
+
+    <table border="1px">
+      <tr id="student1">
+        <td>student 1</td>
+        <td onclick="student1()">Delete</td>
+      </tr>
+      <tr id="student2">
+        <td>student 2</td>
+        <td onclick="student2()">Delete</td>
+      </tr>
+      <tr id="student3">
+        <td>student 3</td>
+        <td onclick="student3()">Delete</td>
+      </tr>
+      <tr id="student4">
+        <td>student 4</td>
+        <td onclick="student4()">Delete</td>
+      </tr>
+      <tr id="student5">
+        <td>student 5</td>
+        <td onclick="student5()">Delete</td>
+      </tr>
+    </table>
+
+    <img
+      onmouseover="changeImg()"
+      src="mobile1.jpeg"
+      alt="Smiley"
+      id="changeImg"
+      onmouseout="mouseOut()"
+    />
+
+    <button onclick="button1()">increament</button>
+    <button onclick="button2()">decreament</button>
+    <button onclick="reset()">reset</button>
+    <span id="output-area"></span>
+    <script>
+      // 1. Show an alert box on click on a link.
+
+      function showAlert() {
+        alert("Show an alert box on clicking");
+      }
+
+      //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      // 2. Display some Mobile images in browser. On click on an image Show the message in alert to user.
+
+      function clickMobile() {
+        alert("see mobile image");
+      }
+      //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      // 3. Display 10 student records in table and each row should contain a delete button. If you click on a button
+      //to delete a record, entire row should be deleted.
+
+      function student1() {
+        document.getElementById("student1").style.display = "none";
+      }
+      function student2() {
+        document.getElementById("student2").style.display = "none";
+      }
+      function student3() {
+        document.getElementById("student3").style.display = "none";
+      }
+      function student4() {
+        document.getElementById("student4").style.display = "none";
+      }
+      function student5() {
+        document.getElementById("student5").style.display = "none";
+      }
+      //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      //4. Display an image in browser. Change the picture on mouseover and set the first picture on mouseout.
+
+      function changeImg() {
+        document.getElementById("changeImg").src = "mobile2.jpeg";
+      }
+      function mouseOut() {
+        document.getElementById("changeImg").src = "mobile1.jpeg";
+      }
+      //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      // 5. Show a counter in browser. Counter should increase on click on increase button and decrease on click
+      //on decrease button. And show updated counter value in browser.
+
+      var x = 0;
+
+      document.getElementById("output-area").innerHTML = x;
+
+      function button1() {
+        document.getElementById("output-area").innerHTML = ++x;
+      }
+
+      function button2() {
+        document.getElementById("output-area").innerHTML = --x;
+      }
+      function reset() {
+        document.getElementById("output-area").innerHTML = 0;
+      }
+    </script>
+  </body>
+</html>
